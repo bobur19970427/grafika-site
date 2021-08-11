@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}SignUp{% endblock title %}
+
+{% block content %}
+    <section id="top_banner">
+        <div class="banner">
+            <div class="inner text-center">
+                <h2>Saytga a'zo bo'lish</h2>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="login-reg">
+        <div class="container">
+            <!-- Top content -->
+            <div class="row">
+                <div class="col-md-6 col-sm-12 forms-right-icons">
+                    <div class="section-heading">
+                        <h2>Ro'yxatdan o'tish<span></span></h2>
+                        <p class="subheading">Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum ea utamur impetus fuisset nam nostrud euismod volumus ne mei.
+                        </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-2 icon"><i class="fa fa-laptop"></i></div>
+                        <div class="col-xs-10 datablock">
+                            <h4>100% Responsive</h4>
+                            <p>Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-2 icon"><i class="fa fa-bullhorn"></i></div>
+                        <div class="col-xs-10 datablock">
+                            <h4>Powerful Features</h4>
+                            <p>Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-2 icon"><i class="fa fa-support"></i></div>
+                        <div class="col-xs-10 datablock">
+                            <h4>Customer Support</h4>
+                            <p>Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!--forms-right-icons-->
+                <div class="col-md-6 col-sm-12">
+                    <div class="form-box">
+                        <div class="form-top">
+                            <div class="form-top-left">
+                                <h3>Ro'yxatdan o'ting</h3>
+                                <p>Ma'lumotlaringizni kiriting</p>
+                            </div>
+                            <div class="form-top-right">
+                                <i class="fa fa-pencil"></i>
+                            </div>
+                        </div>
+                        <div class="form-bottom">
+                            <main class="form-signin">
+                            <form role="form" action="" class="login-form" method="post">{% csrf_token %}
+                                {{ form|crispy }}
+<!--                                <div class="input-group form-group">-->
+<!--                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>-->
+<!--                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">-->
+<!--                                </div>-->
+<!--                                <div class="input-group form-group">-->
+<!--                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-unlock"></i></span>-->
+<!--                                    <input type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1">-->
+<!--                                </div>-->
+                                <br>
+                                <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+                                <p class="mt-5 mb-3 text-muted">© 2017–2021</p>
+                            </form>
+                            </main></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}
